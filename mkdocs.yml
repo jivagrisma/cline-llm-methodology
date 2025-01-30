@@ -1,0 +1,121 @@
+site_name: Cline LLM Methodology
+site_description: Documentation for the Cline LLM Methodology automation tools
+site_author: Jiva Grisma
+repo_url: https://github.com/jivagrisma/cline-llm-methodology
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quick-start.md
+    - Configuration: getting-started/configuration.md
+  - Methodology:
+    - Overview: methodology/llm_methodology.md
+    - Tools Integration: methodology/tools_integration.md
+    - Project Initialization: methodology/project_initialization.md
+    - Tavily Integration: methodology/tavily_integration.md
+    - Resume Work: methodology/resume_prompt.md
+  - Architecture:
+    - Overview: architecture/overview.md
+    - Components: architecture/components.md
+    - Design Decisions: architecture/decisions.md
+  - Tools:
+    - CLI: tools/cli.md
+    - Setup: tools/setup.md
+    - Migration: tools/migration.md
+  - Examples:
+    - API-H2H: examples/api_h2h.md
+  - Contributing:
+    - Guidelines: contributing/guidelines.md
+    - Development: contributing/development.md
+    - Testing: contributing/testing.md
+  - Reference:
+    - API: reference/api.md
+    - Configuration: reference/configuration.md
+    - Environment Variables: reference/environment.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      type: date
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          rendering:
+            show_source: true
+            show_root_heading: true
+            show_category_heading: true
+            show_if_no_docstring: true
+      watch:
+        - src/llm_setup
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jivagrisma/cline-llm-methodology
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/cline-llm-methodology
+
+copyright: Copyright &copy; 2025 Jiva Grisma
+
+extra_css:
+  - css/custom.css
+
+extra_javascript:
+  - js/custom.js
